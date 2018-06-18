@@ -1,3 +1,5 @@
+require 'pry'
+
 class Doctor
   attr_accessor :name
 
@@ -19,7 +21,7 @@ class Doctor
 
   def appointments
     # iterate through all appointments & find those belonging to this doctor
-    Appointment.all.select { |a| a.doctor == self }
+    Appointment.all.select { |a| binding.pry a.doctor == self }
   end
 
   def patients
