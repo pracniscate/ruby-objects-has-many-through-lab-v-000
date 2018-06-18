@@ -22,7 +22,7 @@ class Doctor
   def appointments
     # iterate through all appointments & find those belonging to this doctor
     Appointment.all.select do |a|
-      binding.pry 
+      binding.pry
       a.doctor == self
     end
   end
